@@ -1,0 +1,33 @@
+CREATE DATABASE tp77;
+CREATE TABLE tienda (
+  id                    int NOT NULL,
+  `nombre_comercial`  varchar(30) DEFAULT NULL,
+  tipo                  int DEFAULT NULL,
+  direccion             varchar(30) DEFAULT NULL,
+  cp                    int DEFAULT NULL,
+  poblacion             int DEFAULT NULL,
+  lat                   float DEFAULT NULL,
+  ing                   float DEFAULT NULL,
+  /* Keys */
+  PRIMARY KEY (id)
+) ENGINE = InnoDB;
+
+INSERT INTO tienda (id, `nombre_comercial`, tipo, direccion, cp, poblacion, lat, ing) VALUES
+  (7, 'Wallace', 1, 'Calle de Orence,52', 7600, 1, -38.0053, -57.5553),
+  (8, 'Boston', 1, 'Calle de Fuencarral.104', 7600, 1, -38.0037, -57.5517),
+  (9, 'Media 22', 1, 'Castello.109', 7600, 1, -38.0054, -57.5546);
+
+2)SELECT 
+  `tienda`.`id`,
+  `tienda`.`nombre_comercial`,
+  `tienda`.`direccion`
+FROM
+  `tienda`
+WHERE
+  `tienda`.`direccion` LIKE  '%caste%
+select * from table where cp=7600&&poblacion=1; select * from table where tipo=1;select * from table where lat=-38.0054;select * from table where ing=-57.5553
+
+3)INSERT INTO tienda (id, `nombre_comercial`, tipo, direccion, cp, poblacion, lat, ing) VALUES
+  (7, 'Wallace', 1, 'Calle de Orence,52', 7600, 1, -38.00001, -57.5553),
+  (8, 'OCHOA', 1, 'Calle de Fuencarral.104', 7600, 1, -38.0037, -57.5517),
+  (9, 'EEM 22', 1, 'Castello.109', 7600, 1, -38.0054, -57.5546);
